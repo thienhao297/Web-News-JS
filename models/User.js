@@ -11,7 +11,7 @@ class User {
 
   // Tạo method news để lấy dữ liệu từ api
 
-  news = async function news(country, pagesize, num, category) {
+  async news(country, pagesize, num, category) {
     try {
       const res = await fetch(
         `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&pageSize=${pagesize}&page=${num}&apiKey=1263671da95a415fb191a7380418694c`
@@ -23,7 +23,7 @@ class User {
     } catch (err) {
       console.error(err);
     }
-  };
+  }
 }
 // khai báo newscontainer chung ở user để sử dụng cho cả page news và search
 
